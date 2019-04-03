@@ -116,7 +116,7 @@ server.init = function () {
   // Start the HTTP server
   server.httpServer.listen(config.httpPort, '192.168.0.104', () => {
     console.log('\x1b[36m%s\x1b[0m', 'Server listening on port ' + config.httpPort +
-    ' in ' + config.envName + ' mode ')
+    ' in ' + config.envName + ' mode ');
   });
 
   // Start the HTTPS server

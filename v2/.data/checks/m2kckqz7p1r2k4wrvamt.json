@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"id":"m2kckqz7p1r2k4wrvamt","userPhone":"0683489873","protocol":"https","url":"www.yahoo.com","method":"get","successCodes":[200,201],"timeoutSeconds":3,"state":"up","lastChecked":1554104935059}
+=======
+{"id":"m2kckqz7p1r2k4wrvamt","userPhone":"0683489873","protocol":"https","url":"www.yahoo.com","method":"get","successCodes":[200,201],"timeoutSeconds":3,"state":"up","lastChecked":1554182761432}
+>>>>>>> 34ee68070af31f5cdb3a0af3f52db0831d47f4c7

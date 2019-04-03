@@ -1,0 +1,22 @@
+{
+  "name": "nodejs_master_class",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshuaKeyz/nodejs_master_class.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshuaKeyz/nodejs_master_class/issues"
+  },
+  "homepage": "https://github.com/JoshuaKeyz/nodejs_master_class#readme"
+}

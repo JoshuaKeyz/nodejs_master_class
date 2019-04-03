@@ -23,7 +23,7 @@ httpServer.listen(config.httpPort, ()=>{
 
 
 // Instantiate the HTTPS server 
-var httpsServerOptions = {
+/*var httpsServerOptions = {
 	'key': fs.readFileSync('./https/key.pem'),
 	'cert': fs.readFileSync('./https/cert.pem')
 };
@@ -35,7 +35,7 @@ var httpsServer = https.createServer(httpsServerOptions, (req, res)=>{
 httpsServer.listen(config.httpsPort, ()=>{
 	console.log('The server is listening on port', config.httpsPort);
 });
-
+*/
 
 // All the server logic for both the http and https server
 var unifiedServer = (req, res)=>{

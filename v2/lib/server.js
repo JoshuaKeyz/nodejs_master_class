@@ -19,16 +19,15 @@ const path = require('path');
 const server = {};
 
 server.httpServer = http.createServer((req, res) => {
-  unifiedServer(req, res);
+  server.unifiedServer(req, res);
 });
 
 
-
 // Instantiate the HTTPS server
-server.httpsServerOptions = {
+/*server.httpsServerOptions = {
   'key': fs.readFileSync(path.join(__dirname, '/../https/key.pem')),
   'cert': fs.readFileSync(path.join(__dirname , '/../https/cert.pem'))
-};
+};*/
 server.httpsServer = https.createServer(server.httpsServerOptions, (req, res) => {
   server.unifiedServer(req, res);
 });
@@ -107,13 +106,13 @@ server.router = {
 // Init script
 server.init = function () {
   // Start the HTTP server
-  server.httpServer.listen(config.httpPort, '192.168.0.104', () => {
+  server.httpServer.listen(config.httpPort, '10.23.7.6', () => {
     console.log('Server listening on port ' + config.httpPort +
       ' in ' + config.envName + ' mode ');
   });
 
   // Start the HTTPS server
-  server.httpsServer.listen(config.httpsPort, '192.168.0.104', () => {
+  server.httpsServer.listen(config.httpsPort, '10.23.7.6', () => {
     console.log('Server listening on port ' + config.httpsPort +
       ' in ' + config.envName + ' mode ');
   });

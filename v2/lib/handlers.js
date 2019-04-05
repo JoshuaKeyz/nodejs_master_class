@@ -6,9 +6,34 @@
 const _data = require('./data');
 const helpers = require('./helpers');
 const config = require('../config');
-
+var util = require('util');
+var debug = util.debuglog('handler')
 // Define the handler
 var handlers = {};
+/**
+ * HTML Handlers
+ */
+// Index handler
+handlers.index = function(data, callback) {
+  if(data.method === 'get') {
+    helpers.getTemplate('index', (err, str)=>{
+      debug(str);
+      if(!err && str) {
+        
+        callback(200, str, 'html');
+      }else {
+        debug(err);
+        callback(500, undefined, 'html');
+      }
+    });
+  }else {
+    callback(405, undefined, 'html');
+  }
+}
+
+/**
+ * JSON API Handlers
+ */
 //Sample handler
 handlers.ping = function (data, callback) {
   // Callback a http status code 

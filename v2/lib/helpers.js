@@ -7,6 +7,10 @@ const crypto = require('crypto');
 const config = require('../config');
 const querystring = require('querystring');
 const https = require('https');
+const path = require('path');
+const fs = require('fs');
+var util = require('util');
+var debug = util.debuglog('helpers')
 
 // Container for all the helpers
 const helpers = {};
@@ -121,4 +125,24 @@ helpers.sendTwilioSms = function(phone, msg, callback) {
   }
 };
 
+
+// Get the string content of a template
+helpers.getTemplate = (templateName, callback) =>{
+  templateName = typeof(templateName) === 'string' && templateName.length > 0 ? templateName: false;
+
+  if(templateName) {
+    const templateDir = path.join(__dirname, '/../templates/');
+    
+    fs.readFile(templateDir + templateName + '.html', 'utf8', (err, str)=>{
+      if(!err && str && str.length > 0) {
+        callback(false, str);
+      }else {
+        debug(err);
+        callback('No template could be found');
+      }
+    })
+  } else {
+    callback('A valid template name was not specified');
+  }
+}
 module.exports = helpers;

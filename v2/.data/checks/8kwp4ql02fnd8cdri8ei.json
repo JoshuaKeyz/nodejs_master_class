@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 {"id":"8kwp4ql02fnd8cdri8ei","userPhone":"5555544444","protocol":"https","url":"www.google.com","method":"get","timeoutSeconds":3,"successCodes":[200,201],"state":"up","lastChecked":1554443402722}
+=======
+<<<<<<< HEAD
+{"id":"8kwp4ql02fnd8cdri8ei","userPhone":"5555544444","protocol":"https","url":"www.google.com","method":"get","timeoutSeconds":3,"successCodes":[200,201],"state":"up","lastChecked":1554104934864}
+=======
+{"id":"8kwp4ql02fnd8cdri8ei","userPhone":"5555544444","protocol":"https","url":"www.google.com","method":"get","timeoutSeconds":3,"successCodes":[200,201],"state":"up","lastChecked":1554182761270}
+>>>>>>> 34ee68070af31f5cdb3a0af3f52db0831d47f4c7
+>>>>>>> 65a1dc2b9f949614504e9671a829735f69723c67
